@@ -7,7 +7,7 @@ configuration:
   analytics:
     provider: plausible
   locale: en-US
-  baseUrl: pahal.ext.netlify.app
+  baseUrl: pahal-ext.netlify.app
   ignorePatterns:
     - private
     - templates
