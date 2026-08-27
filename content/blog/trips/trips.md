@@ -1,0 +1,1 @@
+[Ghent](Ghent) day trip during the Gentse Feesten
