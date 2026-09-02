@@ -29,7 +29,6 @@ configuration:
         secondary: "#1E293B"
         tertiary: "#334155"
         highlight: rgba(30, 41, 59, 0.15)
-        textHighlight: "#1E293B33"
       darkMode:
         light: "#161618"
         lightgray: "#393639"
@@ -39,7 +38,7 @@ configuration:
         secondary: "#7b97aa"
         tertiary: "#84a59d"
         highlight: rgba(143, 159, 169, 0.15)
-        textHighlight: "#b3aa0288"
+        textHighlight: "#C4B5FD33"
 plugins:
   - source: "@quartz-community/created-modified-date"
     enabled: true
@@ -111,7 +110,7 @@ plugins:
   - source: "@quartz-community/quartz-fonts"
     enabled: true
   - source: "@quartz-themes/core"
-    enabled: true
+    enabled: false
     options:
       theme: default
       mode: both
@@ -164,6 +163,13 @@ plugins:
       priority: 50
   - source: "@quartz-community/graph"
     enabled: true
+    options:
+     localGraph:
+       nodeRadius: 6
+       scale: 1.2
+     globalGraph:
+       nodeRadius: 6
+       scale: 1.2
     layout:
       position: right
       priority: 10

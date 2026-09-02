@@ -1,3 +1,7 @@
+---
+title: Start here
+---
+
 Hey there! glad you're here.
 
 Whether you're just visiting or here for a while, I hope this website inspires you.
