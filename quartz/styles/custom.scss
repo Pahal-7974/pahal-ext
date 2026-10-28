@@ -1,43 +1,25 @@
 @use "./variables.scss" as *;
 
-// put your custom CSS here!
+// ---------- Links ----------
 a, a:visited, a.internal, a.external {
-  color: #C4B5FD !important;
   background: none !important;
   text-decoration: underline;
+  color: var(--secondary) !important;
 }
-
-a:hover {
-  color: #6e89f8 !important;
-  opacity: 0.85;
+:root[saved-theme="dark"] {
+  a, a:visited, a.internal, a.external { color: #C4B5FD !important; }
+  a:hover { color: #6e89f8 !important; }
 }
+a:hover { opacity: 0.85; }
 
-.graph-container {
-  display: none;
-}
-
+// ---------- Hide folder listings ----------
 .folder-content,
 .page-listing {
   display: none;
 }
 
-.page > #quartz-body .header,
-.page .header {
-  display: flex;
-  align-items: center;
-  gap: 2rem;
-  padding: 1.25rem 0;
-  border-bottom: 1px solid var(--lightgray);
-  position: sticky;
-  top: 0;
-  z-index: 10;
-  backdrop-filter: blur(12px);
-  background: color-mix(in srgb, var(--light) 80%, transparent);
-}
-.header .page-title { font-size: 1.6rem; margin: 0; }
-.header .search { margin-left: auto; }
-
-html { font-size: 18px; }              // scales everything proportional (rem-based)
+// ---------- Bigger text ----------
+html { font-size: 18px; }
 
 article {
   font-size: 1.2rem;
@@ -49,6 +31,72 @@ article {
   p, li { font-size: 1.2rem; }
 }
 
-// widen the reading column now that the sidebars are gone
-.page { max-width: 1200px; }
-.center, .page > #quartz-body { max-width: 900px; margin: 0 auto; }
+// ---------- Graph: hidden on homepage ----------
+body[data-slug="index"] .graph { display: none; }
+
+// ---------- Horizontal top nav (desktop) ----------
+@media all and (min-width: 801px) {
+  .page { max-width: 1000px; }
+
+  // single column: bar on top, content below
+  .page > #quartz-body {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto 1fr auto;
+    grid-template-areas:
+      "grid-sidebar-left"
+      "grid-header"
+      "grid-center"
+      "grid-footer";
+  }
+  .page .sidebar.right { display: none; }
+
+  // left sidebar becomes a sticky glass bar
+  .page .sidebar.left {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    width: auto;
+    height: auto;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--lightgray);
+    backdrop-filter: blur(12px);
+    background: color-mix(in srgb, var(--light) 80%, transparent);
+  }
+
+  // order: title | nav | search + toggles
+  .page .sidebar.left > * { order: 3; }
+  .page .sidebar.left > .page-title,
+  .page .sidebar.left > :has(.page-title) { order: 1; }
+  .page .sidebar.left > .explorer { order: 2; }
+  .page .sidebar.left > :has(.search) { margin-left: auto; }
+
+  // flatten explorer into top-level links only
+  .explorer .explorer-content { max-height: none; overflow: visible; }
+  .explorer .explorer-content ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .explorer .folder-outer { display: none !important; }
+  .explorer .title-button,
+  .explorer .collapse { display: none; }
+  .explorer a {
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 0.4rem 1rem;
+    border-radius: 999px;
+    transition: all 0.2s ease;
+  }
+  .explorer a:hover { background: var(--highlight); }
+
+  // keep metamorphosis out of the nav
+  .explorer li:has(> a[href$="metamorphosis"]) { display: none; }
+}
