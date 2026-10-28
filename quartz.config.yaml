@@ -77,7 +77,7 @@ plugins:
     enabled: true
     order: 40
   - source: "@quartz-community/table-of-contents"
-    enabled: true
+    enabled: false
     order: 50
     layout:
       position: right
@@ -164,15 +164,15 @@ plugins:
   - source: "@quartz-community/graph"
     enabled: true
     options:
-     localGraph:
-       nodeRadius: 6
-       scale: 1.2
-     globalGraph:
-       nodeRadius: 6
-       scale: 1.2
+      localGraph:
+        nodeRadius: 6
+        scale: 1.2
+      globalGraph:
+        nodeRadius: 6
+        scale: 1.2
     layout:
-      position: right
-      priority: 10
+      position: afterBody
+      priority: 20
   - source: "@quartz-community/search"
     enabled: true
     layout:
@@ -184,8 +184,8 @@ plugins:
   - source: "@quartz-community/backlinks"
     enabled: true
     layout:
-      position: right
-      priority: 50
+      position: afterBody
+      priority: 30
   - source: "@quartz-community/article-title"
     enabled: true
     layout:
