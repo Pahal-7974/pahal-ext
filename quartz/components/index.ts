@@ -5,6 +5,7 @@ import DesktopOnly from "./DesktopOnly"
 import MobileOnly from "./MobileOnly"
 import Flex from "./Flex"
 import ConditionalRender from "./ConditionalRender"
+import NavBar from "./NavBar"
 
 export { componentRegistry, defineComponent } from "./registry"
 export { External } from "./external"
