@@ -20,3 +20,19 @@ a:hover {
 .page-listing {
   display: none;
 }
+
+.page > #quartz-body .header,
+.page .header {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding: 1.25rem 0;
+  border-bottom: 1px solid var(--lightgray);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  backdrop-filter: blur(12px);
+  background: color-mix(in srgb, var(--light) 80%, transparent);
+}
+.header .page-title { font-size: 1.6rem; margin: 0; }
+.header .search { margin-left: auto; }
