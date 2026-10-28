@@ -36,3 +36,19 @@ a:hover {
 }
 .header .page-title { font-size: 1.6rem; margin: 0; }
 .header .search { margin-left: auto; }
+
+html { font-size: 18px; }              // scales everything proportional (rem-based)
+
+article {
+  font-size: 1.2rem;
+  line-height: 1.75;
+
+  h1 { font-size: 3rem; line-height: 1.1; }
+  h2 { font-size: 2.1rem; }
+  h3 { font-size: 1.6rem; }
+  p, li { font-size: 1.2rem; }
+}
+
+// widen the reading column now that the sidebars are gone
+.page { max-width: 1200px; }
+.center, .page > #quartz-body { max-width: 900px; margin: 0 auto; }
