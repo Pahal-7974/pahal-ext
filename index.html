@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>pahal.ext</title>
-<meta name="description" content="Pahal Agrawal: AI consultant combining my computer science and economics expertise by day. Projects, research and writing - Online portfolio.">
+<meta name="description" content="Pahal Agrawal: AI engineer &amp; consultant by day, host, speaker and event curator outside work. Amsterdam.">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%AA%BB%3C/text%3E%3C/svg%3E">
 <script>
 const MAIL=["pahal.ext","gmail.com"].join(String.fromCharCode(64));
@@ -152,22 +152,53 @@ footer .socials{margin:0 0 12px}
 .js .card.reveal.in{transition:opacity .7s ease var(--d,0s),transform .7s cubic-bezier(.2,.7,.2,1) var(--d,0s),box-shadow .3s}
 .js .card.reveal.in:hover{transform:translateY(-3px)}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.js .reveal{opacity:1;transform:none;transition:none}.tile{transition:none}}
+.openpill{display:inline-block;font:600 13px "JetBrains Mono",monospace;padding:6px 14px;border-radius:999px;background:var(--bg2);color:var(--acc);border:1px solid var(--line);margin:4px 0 0;max-width:none}
+.hire-note{margin-top:22px;font-size:14px;color:var(--mute)}
+#hire{padding:40px 0 48px}
+#hire .sub{margin-bottom:20px}
+#hire .grid{grid-template-columns:repeat(3,1fr);gap:10px}
+#hire .card{border-radius:14px;padding:12px 14px 10px}
+#hire .card h3{font-size:16px;margin-bottom:4px}
+#hire .card p{font-size:13px;line-height:1.45;margin-bottom:8px}
+#hire .card .tag{font-size:11px;padding:1px 8px;margin-bottom:6px}
+#hire .card .go{font-size:14px}
+#hire .hire-note{margin-top:14px}
+@media(max-width:800px){#hire .grid{grid-template-columns:1fr}#hire{padding:40px 0 48px}}
+
 </style>
 </head>
 <body>
 <div id="bar"></div>
 <nav><div class="bar">
 <b><a href="#home" class="brand">pahal.ext</a></b>
-<a href="#about">About</a><a href="#experience">Experience</a><a href="#education">Education</a><a href="#work">Work</a><a href="#skills">Skills</a><a href="#contact">Contact</a>
+<a href="#hire">Work with me</a><a href="#about">About</a><a href="#experience">Experience</a><a href="#education">Education</a><a href="#work">Work</a><a href="#skills">Skills</a><a href="#contact">Book me</a>
 <button class="chip" id="theme" aria-pressed="false" aria-label="Switch to dark mode"></button>
 </div></nav>
 
 <main>
 <section id="home"><div class="wrap">
 <h1 class="reveal">I build AI that works, <span class="grad">and the economics that make it worth it.</span></h1>
-<p class="lead reveal" style="--d:.1s">Computer scientist and economist based in Amsterdam. I’m an AI Engineer & Consultant, I build fun projects on the side, and I write about what I learn.</p>
-<div class="reveal" style="--d:.2s"><a class="btn" href="#work">See my work</a><a class="btn alt" href="#contact">Get in touch</a></div>
+<p class="lead reveal" style="--d:.1s">Computer scientist and economist in Amsterdam. By day, I’m an AI Engineer & Consultant. Outside work, I host, speak and curate events.</p>
+<div class="reveal" style="--d:.2s"><a class="btn" href="#hire">Book me to host or speak</a><a class="btn alt" href="#work">See my work</a></div>
+<p class="openpill reveal" style="--d:.25s">Open to: hosting · speaking · event curation · creative sessions</p>
 <div class="socials reveal" style="--d:.3s" data-mode="icons"></div>
+</div></section>
+
+<section id="hire"><div class="wrap">
+<h2 class="reveal">Work with me</h2>
+<p class="sub reveal">I host, speak and curate events. I take these on outside my day job in AI.</p>
+<div class="grid">
+ <article class="card reveal"><span><span class="tag">Hosting</span></span><h3>Host &amp; MC</h3>
+  <p>Hosted TEDxVU Amsterdam (120+ attendees). Judged international debate finals.</p>
+  <a class="go" href="#contact" data-mail="Hosting enquiry">Book me to host</a></article>
+ <article class="card reveal"><span><span class="tag">Speaking</span></span><h3>Speak</h3>
+  <p>Panelist at VU International Women’s Day 2025. Pitched at Iceland Innovation Week. English and Dutch.</p>
+  <a class="go" href="#contact" data-mail="Speaking enquiry">Invite me to speak</a></article>
+ <article class="card reveal"><span><span class="tag">Creative</span></span><h3>Curate &amp; create</h3>
+  <p>Events lead at Buzbo. Chapter organiser at AI Salon. Art host with ARTParty.</p>
+  <a class="go" href="#contact" data-mail="Event or creative enquiry">Plan something together</a></article>
+</div>
+<p class="hire-note reveal">Not taking on freelance AI, data or software projects.</p>
 </div></section>
 
 <section id="about"><div class="wrap">
@@ -218,7 +249,7 @@ footer .socials{margin:0 0 12px}
 
 <section id="contact"><div class="wrap">
 <h2 class="reveal">Contact</h2>
-<p class="sub reveal">Open to event work, creative curation, and public speaking opportunities. Drop me a line, or book 30 minutes!</p>
+<p class="sub reveal">Open to hosting, speaking, event curation and creative sessions. Email me, or book 30 minutes.</p>
 <div class="socials reveal" data-mode="buttons"></div>
 </div></section>
 </main>
@@ -228,7 +259,7 @@ footer .socials{margin:0 0 12px}
 <script>
 const $=s=>document.querySelector(s);
 const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
-const WTAGS=["Tech","Research","Events","Sustainability","Creative"];
+const WTAGS=["Events","Speaking","Creative","Tech","Research","Sustainability"];
 const DOMAINS=["Tech","Events","Sustainability","Creative","Languages"];
 
 // EDIT: work experience. Each role can have as many numbered groups as you like; each group holds any number of points.
@@ -240,7 +271,7 @@ const EXPERIENCE=[
    {title:"Events & recruitment",items:["Leading campus outreach and network building.","Represented Datacation at TechDays 2026, an AI builder-focused conference in the Netherlands."]}]},
  {dates:"Ongoing",place:"Amsterdam, Netherlands",mode:"",role:"pahal.ext",org:"Events and Community",type:"Self-employed",logo:"p",img:"data:image/jpeg;base64,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",
   intro:"Personal brand, this website, and specialised event work for clients",
-  cta:{title:"Looking for clients",text:"Open to event hosting, operations, and public speaking opportunities.",label:"Get in touch",href:"mailto:"+MAIL},
+  cta:{title:"Looking for event clients",text:"Open to hosting, speaking, event curation and creative sessions.",label:"Book me",href:"#hire"},
   groups:[
    {title:"Buzbo",status:"Current",meta:"Events Lead · Amsterdam",items:["Organising an event every 6 weeks in Amsterdam."]},
    {title:"AI Salon",status:"Current",meta:"Chapter Organiser · Amsterdam",items:["Co-ordinating people, operations and marketing for 6-weekly Amsterdam events."]},
@@ -266,7 +297,7 @@ const EXPERIENCE=[
    {title:"TEDxVU Amsterdam",meta:"Acquisition and Hosting · Sep 2025 – May 2026",items:["Hosted main event (120+ attendees).","Led speaker acquisition and coordinated end-to-end event experience for 7 speakers, managing stakeholder expectations under tight timelines."]},
    {title:"FAM",meta:"Commissioner of External Affairs · Sep 2024 – Sep 2025",items:["Secured €10,000+ from 8+ sponsors to fund career events for 350+ members.","Managed full documentation cycle from outreach to fund allocation, acting as a trusted point of contact for external partners."]},
    {title:"WiSTEM VU",meta:"Chair and Head of Activities · Nov 2022 – Jun 2026",items:["Helped organise 10+ events for 80+ internal members.","Coordinated events with Uber and Booking.com to provide networking opportunities for our members.","Secured 500+ EUR in sponsorship."]},
-   {title:"Studsec",meta:"Secretary and Founding Board Member · Sep 2024 – Jun 2025",items:["Managed the newsletter.","Organised events, including the 2025 CTF with 100+ attendees.", "Overlooked Company Partnerships"]},
+   {title:"Studsec",meta:"Secretary and Founding Board Member · Sep 2024 – Jun 2025",items:["Managed the newsletter.","Organised events, including the 2025 CTF with 100+ attendees.", "Oversaw company partnerships"]},
    {title:"FSR (Faculty Student Council)",meta:"Head of Education · Sep 2023 – Jan 2025",items:["Led Active Blended Learning Initiative and established a feedback loop at the program level to improve the implementation of ABL across the faculty.","Represented 5,000+ students in faculty-level policy discussions."]},
    {title:"Teaching Assistant",meta:"Computer Science · Sep 2023 – Jan 2025",items:["Supported 100+ students through core CS coursework via grading, practical sessions, and 1:1 assignment guidance, adapting explanations for a wide range of technical skill levels."]},
    {title:"STORM",meta:"Treasurer · Sep 2023 – Jun 2024",items:["Treasurer for AAPP (Amsterdam Algorithmic Programming Preliminaries).","Active member of the Diversity Committee.","Volunteered at Career Fairs."]},
@@ -293,9 +324,11 @@ const WORKS=[
  {tags:["Research"],kind:"paper",title:"District-Level Inequality in Uttar Pradesh",desc:"MSc thesis: a quantitative analysis of inequality across the districts in Uttar Pradesh, India.",link:""},
  {tags:["Tech"],kind:"demo",title:"NL Expat Guide",desc:"Streamlit app that helps expats navigate the Dutch job market.",link:""},
  {tags:["Sustainability"],kind:"demo",title:"Device refurbishment and donation",desc:"Helped refurbish retired company devices for donation to Smile At School, a Ghana-based student organisation, and wrote the internal magazine feature on its impact.",link:""},
- {tags:["Sustainability"],kind:"demo",title:"EV battery passport lifecycle traceability",desc:"A traceability concept for the lifecycle of EV batteries, pitched at Iceland Innovation Week 2025 and tied to UN SDG 12 (responsible consumption and production).",link:""},
+ {tags:["Sustainability","Speaking"],kind:"demo",title:"EV battery passport lifecycle traceability",desc:"A traceability concept for the lifecycle of EV batteries, pitched at Iceland Innovation Week 2025 and tied to UN SDG 12 (responsible consumption and production).",link:""},
 //  {tags:["Tech"],kind:"demo",title:"Microsoft AI-103 (Azure AI Foundry), in progress",desc:"Studying Azure AI Foundry architecture, RAG systems, hybrid search and semantic re-ranking, with self-written study guides for each module.",link:""},
- {tags:["Events"],kind:"demo",title:"TEDxVU Amsterdam",desc:"Co-ordinated speaker experience for 7 speakers around the world, and hosted the night with 120+ attendees.",link:""},
+ {tags:["Events","Speaking"],kind:"demo",title:"TEDxVU Amsterdam",desc:"Co-ordinated speaker experience for 7 speakers around the world, and hosted the night with 120+ attendees.",link:""},
+ {tags:["Speaking","Events"],kind:"demo",title:"International debating",desc:"Speaker and judge with Bonaparte: helped organise the Amsterdam Open, judged semi-finals and finals at the Copenhagen Open, and competed at Leiden Novice and Tilburg Open.",link:""},
+ {tags:["Events"],kind:"demo",title:"Buzbo and AI Salon",desc:"Organising an event every 6 weeks in Amsterdam at Buzbo, and co-ordinating people, operations and marketing for AI Salon’s 6-weekly events.",link:""},
  {tags:["Creative"],kind:"demo",title:"ARTParty",desc:"I curate and host art sessions (painting, clay, other mediums) with ARTParty.",link:""},
  {tags:["Creative"],kind:"demo",title:"Candle painting",desc:"Curated a sip & paint girls night in as a birthday ritual started in 2025.",link:""},
  {tags:["Creative"],kind:"demo",title:"Ceramic tile painting",desc:"Curated a sip & paint girls night in as a birthday ritual continued in 2026",link:""}
@@ -315,7 +348,7 @@ const SKILLS=[
  {domain:"Sustainability",name:"Coastal Island Research",level:2,proof:"UCL summer school, 2023."},
  {domain:"Economics",name:"Pluralist Economics",level:2,proof:"UCL summer school, 2023."},
  {domain:"Sustainability",name:"Social Entrepreneurship",level:2,proof:"Spark Social Innovation, Iceland"},
- {domain:"Sustainability",name:"Circularity",level:2,proof:"EV Batter Passport solution"},
+ {domain:"Sustainability",name:"Circularity",level:2,proof:"EV Battery Passport solution"},
  {domain:"Creative",name:"Writing and storytelling",level:3,proof:"pahal.ext blog, thesis writing."},
  {domain:"Creative",name:"Painting, Embroidery",level:3,proof:"Joint art page @_artscapes_ on Instagram."},
  {domain:"Creative",name:"Clay Modelling",level:3,proof:"ArtParty."},
@@ -353,12 +386,14 @@ document.querySelectorAll(".socials").forEach(el=>{
  }).join("");
 });
 
+document.querySelectorAll("[data-mail]").forEach(a=>{a.href="mailto:"+MAIL+"?subject="+encodeURIComponent(a.dataset.mail)});
+
 // Scroll reveal
 const io="IntersectionObserver" in window?new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target)}}),{threshold:.12,rootMargin:"0px 0px -6% 0px"}):null;
 function observe(root=document){root.querySelectorAll(".reveal:not(.in)").forEach(el=>io?io.observe(el):el.classList.add("in"))}
 const stagger=el=>[...el.children].forEach((c,k)=>c.style.setProperty("--d",(k*.08)+"s"));
 
-let tag="Tech",domain="Random";
+let tag="Events",domain="Random";
 function renderWorks(){
  const items=WORKS.filter(w=>tag==="All"||w.tags.includes(tag));
  $("#works").innerHTML=items.map(w=>`<article class="card reveal"><span>${w.tags.map(t=>`<span class="tag">${esc(t)}</span>`).join("")}</span><h3>${esc(w.title)}</h3><p>${esc(w.desc)}</p>${w.link&&w.link!=="#"?`<a class="go" href="${esc(w.link)}" target="_blank" rel="noopener">${w.kind==="paper"?"Read it":"Open demo"}</a>`:(w.link==="#"?`<span class="mono">Link coming soon</span>`:"")}</article>`).join("");
